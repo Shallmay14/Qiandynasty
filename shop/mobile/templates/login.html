@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ECShop_mobile</title>
+</head>
+
+<body>
+
+<p align='left'>
+用戶登錄<br/>
+--------------<br/>
+{if $login_faild eq 1}
+用戶名或密碼錯誤,請重新輸入<br/>
+{/if}
+<form action="user.php?act=do_login" method="post">
+用戶名:<input type='text' name='username'/><br/>
+密碼:<input type='password' name='pwd'/><br/>
+<input name="登錄" type="submit" value="登錄" />
+</form>
+<br/>
+<a href='index.php'>返回首頁</a>
+{$footer}
+</p>
+</body>
+</html>

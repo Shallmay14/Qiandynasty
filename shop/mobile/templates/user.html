@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ECShop_mobile</title>
+</head>
+
+<body>
+<p align='left'>
+用戶中心<br/>
+--------------<br/>
+<a href='user.php?act=order_list'>我的訂單</a><br/>
+--------------<br/>
+商城推薦產品<br/>
+{foreach from=$best_goods item=best_data}
+    <a href='goods.php?id={$best_data.id}'>{$best_data.name}</a>[{$best_data.shop_price}]<br/>
+{/foreach}
+--------------<br/>
+<a href='index.php'>返回首頁</a>
+{$footer}
+</p>
+</body>
+</html>

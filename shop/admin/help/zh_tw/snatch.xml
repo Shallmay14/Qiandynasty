@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="gbk"?>
+
+<help>
+
+  <section id="list">
+    <title>管腳笆</title>
+    <content>
+    <![CDATA[
+	<p><strong>е硉絪胯</strong></p>
+	<p>ノめ程や基㎝縩だ秈︽е硉絪胯翴阑赣跋办碞絪胯</p>
+	<p><strong>巨</strong></p>
+	<p>癸–笆巨珹琩冈薄絪胯簿埃<br />
+	   琩冈薄琩讽玡笆┮Τノめ基薄猵莉讽玡篈琌êノめ莉贱
+	</p>
+    <p><strong>睰笆</strong></p>
+	<p>翴阑à<a href="snatch.php?act=add" target="main-frame"><span class="link">睰管腳笆</span></a>渺钡碞秈睰</p>
+	]]>
+    </content>
+  </section>
+
+  <section id="add">
+    <title>睰管腳笆</title>
+    <content>
+    <![CDATA[
+	<p><strong>睰管腳笆</strong><p>
+	<p>笆嘿惠璶–Ω笆臫獹嘿<br>
+	   笆坝珇赣笆匡坝珇<span class="tips">﹍篈坝珇惠璶块坝珇闽龄翴阑穓盢┮Τ坝珇い坝珇Τ赣闽龄┮Τ坝珇笆坝珇い匡タ絋坝珇</span><br />
+	   笆秨﹍丁㎝挡丁钡絪胯ぃ筁Αゲ斗恶糶2006-09-15 23:00:00<br />
+	   基ノめ基絛瞅禬絛瞅跌礚<br />
+	   程惠や基0莉贱ノめ基ぶ碞ぶ基扳倒ノめ某ぃ璶0硂妓躬纘ノめ俱基絛瞅ず基<br />
+	   笆磞瓃癸赣笆磞瓃獺盢玡甶瞷倒ノめ<br />
+	   翴阑à<a href="snatch.php?act=list" target="main-frame"><span class="link">管腳笆</span></a>渺钡碞
+	</p>
+	]]>
+    </content>
+  </section>
+
+  <section id="view">
+    <title>笆冈薄</title>
+    <content>
+    <![CDATA[
+	<p><strong>笆冈薄</strong></p>
+	<p>狦竒ノめ把籔赣笆盢ノめ基薄猵矗ボ讽玡琌ノめ莉秤ノめ基薄猵基抖基ノめ基丁㎝┮基逼琩<br />翴阑à<a href="snatch.php?act=list" target="main-frame"><span class="link">管腳笆</span></a>渺钡碞</p>
+	]]>
+    </content>
+  </section>
+
+  <section id="edit">
+    <title>管腳絪胯</title>
+    <content>
+    <![CDATA[<p><strong>管腳絪胯</strong></p><p>叫把管腳睰腊<br />翴阑à<a href="snatch.php?act=list" target="main-frame"><span class="link">管腳笆</span></a>渺钡碞</p>]]>
+    </content>
+  </section>
+
+</help>

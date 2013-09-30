@@ -1,0 +1,19 @@
+<!DOCTYPE wml PUBLIC '-//WAPFORUM//DTD WML 1.1//EN' 'http://www.wapforum.org/DTD/wml_1.1.xml'>
+<wml>
+<head><meta http-equiv='Cache-Control' content='max-age=0'/></head>
+<card id='ecshop' title='ECShop_WAP'>
+<p align='left'>
+用戶中心<br/>
+--------------<br/>
+<a href='user.php?act=order_list'>我的訂單</a><br/>
+--------------<br/>
+商城推薦產品<br/>
+{foreach from=$best_goods item=best_data}
+    <a href='goods.php?id={$best_data.id}'>{$best_data.name}</a>[{$best_data.shop_price}]<br/>
+{/foreach}
+--------------<br/>
+<a href='index.php'>返回首頁</a>
+{$footer}
+</p>
+</card>
+</wml>

@@ -1,0 +1,3 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{insert_scripts files='transport.js,utils.js'}
+<div id="ECS_COMMENT"> {* ECSHOP 提醒您：動態載入comments_list.lbi，顯示評論列表和評論表單 *}{insert name='comments' type=$type id=$id}</div>

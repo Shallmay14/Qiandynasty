@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="gbk"?>
+
+<help>
+
+  <section id="list_all">
+    <title>砯祅癘</title>
+    <content>
+    <![CDATA[
+	<p><strong>е硉穓</strong></p>
+	<p>穓逆い块坝珇闽龄秈︽浪</p>
+
+	<p><strong>矗ボ</strong></p>
+	<p>砯祅癘癘魁矗ユ丁逼翴阑琩冈薄秈˙巨</p>
+	
+	]]>
+    </content>
+  </section>
+
+  <section id="detail">
+    <title>琩冈薄</title>
+    <content>
+    <![CDATA[
+	<p><strong>琩冈薄</strong></p>
+	<p>陪ボノめ┮矗ユ┮Τ獺<br />
+	翴阑à<a href="goods_booking.php?act=list_all" target="main-frame"><span class="link">砯祅癘恨瞶</span></a>渺钡碞</p>
+	]]>
+    </content>
+  </section>
+
+</help>

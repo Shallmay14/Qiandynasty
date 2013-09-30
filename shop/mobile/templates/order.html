@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ECShop_mobile</title>
+{insert_scripts files="../../js/utils.js,../js/transport.js"}
+{insert_scripts files="../../js/region.js"}
+
+<script type="text/javascript">
+region.isAdmin=true;
+</script>
+</head>
+
+<body>
+<p align='left'>
+{if $user_name}
+    [<a href='user.php?act=user_center'>用戶中心</a>]&nbsp;[<a href='user.php?act=logout'>退出</a>]<br/>
+{else}
+    〔<a href='user.php?act=login'>登錄</a>〕&nbsp;〔<a href='user.php?act=register'>免費註冊</a>〕<br/>
+{/if}
+----------------------------------<br />
+<form action="order.php?act=done" method="post" name="theForm" id="theForm" >
+<!--訂單信息-->
+商品列表
+<table width="150" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" style="font-size:12px">
+            <tr>
+              <th bgcolor="#ffffff">商品名稱</th>
+              <th bgcolor="#ffffff">商品屬性</th>
+              <th bgcolor="#ffffff">本店價</th>
+              <th bgcolor="#ffffff">購買數量</th>
+              <th bgcolor="#ffffff">小計</th>
+            </tr>
+            <!-- {foreach from=$goods_list item=goods} -->
+            <tr>
+              <td bgcolor="#ffffff">
+              <!-- {if $goods.goods_id gt 0 && $goods.extension_code eq 'package_buy'} -->
+          <a href="javascript:void(0)" onclick="setSuitShow({$goods.goods_id})" class="f6">{$goods.goods_name}<span style="color:#FF0000;">（{$lang.remark_package}）</span></a>
+          <div id="suit_{$goods.goods_id}" style="display:none">
+              <!-- {foreach from=$goods.package_goods_list item=package_goods_list} -->
+            <a href="goods.php?id={$package_goods_list.goods_id}" target="_blank" class="f6">{$package_goods_list.goods_name}</a><br />
+              <!-- {/foreach} -->
+          </div>
+          <!-- { else } -->
+          <a href="goods.php?id={$goods.goods_id}" target="_blank" class="f6">{$goods.goods_name}</a>
+                <!-- {if $goods.parent_id > 0} -->
+                <span style="color:#FF0000">（相關配件）</span>
+                <!-- {elseif $goods.is_gift} -->
+                <span style="color:#FF0000">（贈品）</span>
+                <!-- {/if} -->
+          <!-- {/if} -->
+          <!-- {if $goods.is_shipping} -->(<span style="color:#FF0000">免運費商品</span>)<!-- {/if} -->
+              </td>
+              <td bgcolor="#ffffff">{$goods.goods_attr|nl2br}</td>
+              <!-- {if $show_marketprice} -->
+              <td align="right" bgcolor="#ffffff">{$goods.formated_market_price}</td>
+              <!-- {/if} -->
+              <td bgcolor="#ffffff" align="right">{$goods.formated_goods_price}</td>
+              <td bgcolor="#ffffff" align="right">{$goods.goods_number}</td>
+              <td bgcolor="#ffffff" align="right">{$goods.formated_subtotal}</td>
+            </tr>
+            <!-- {/foreach} -->
+            <tr>
+              <td bgcolor="#ffffff" colspan="7">
+              <!-- {if $discount gt 0} -->{$your_discount}<br /><!-- {/if} -->
+              {$shopping_money}<!-- {if $show_marketprice} -->，{$market_price_desc}<!--{/if}-->
+              </td>
+            </tr>
+          </table>
+
+
+----------------------------------<br />
+  <!--配送信息-->
+  收貨人信息
+      <table width="150" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" style="font-size:12px">
+            <tr>
+              <td bgcolor="#ffffff">收貨人姓名:</td>
+              <td bgcolor="#ffffff">{$consignee.consignee|escape}</td>
+              <td bgcolor="#ffffff">電子郵件地址:</td>
+              <td bgcolor="#ffffff">{$consignee.email|escape}</td>
+            </tr>
+            <!-- {if $total.real_goods_count gt 0} -->
+            <tr>
+              <td bgcolor="#ffffff">詳細地址:</td>
+              <td bgcolor="#ffffff">{$consignee.address|escape} </td>
+              <td bgcolor="#ffffff">郵政編碼:</td>
+              <td bgcolor="#ffffff">{$consignee.zipcode|escape}</td>
+            </tr>
+            <!-- {/if} -->
+            <tr>
+              <td bgcolor="#ffffff">電話:</td>
+              <td bgcolor="#ffffff">{$consignee.tel} </td>
+              <td bgcolor="#ffffff">手機:</td>
+              <td bgcolor="#ffffff">{$consignee.mobile|escape}</td>
+            </tr>
+             <!-- {if $total.real_goods_count gt 0} -->
+            <tr>
+              <td bgcolor="#ffffff">標誌建築:</td>
+              <td bgcolor="#ffffff">{$consignee.sign_building|escape} </td>
+              <td bgcolor="#ffffff">最佳送貨時間:</td>
+              <td bgcolor="#ffffff">{$consignee.best_time|escape}</td>
+            </tr>
+            <!-- {/if} -->
+          </table>
+
+----------------------------------<br />
+  <!--配送方式-->
+  配送方式
+    <table width="150" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" style="font-size:12px">
+            <tr>
+              <th bgcolor="#ffffff" width="5%">&nbsp;</th>
+              <th bgcolor="#ffffff" width="25%">名稱</th>
+              <th bgcolor="#ffffff">描述</th>
+              <th bgcolor="#ffffff" width="15%">費用</th>
+              <th bgcolor="#ffffff" width="15%">免費額度</th>
+            </tr>
+            <!-- {foreach from=$shipping_list item=shipping} 循環配送方式 -->
+            <tr>
+              <td bgcolor="#ffffff" valign="top"><input name="shipping" type="radio" value="{$shipping.shipping_id}" {if $order.shipping_id eq $shipping.shipping_id}checked="true"{/if} supportCod="{$shipping.support_cod}" insure="{$shipping.insure}" onclick="selectShipping(this)" />
+              </td>
+              <td bgcolor="#ffffff" valign="top"><strong>{$shipping.shipping_name}</strong></td>
+              <td bgcolor="#ffffff" valign="top">{$shipping.shipping_desc}</td>
+              <td bgcolor="#ffffff" align="right" valign="top">{$shipping.format_shipping_fee}</td>
+              <td bgcolor="#ffffff" align="right" valign="top">{$shipping.free_money}</td>
+              
+            </tr>
+            <!-- {/foreach} 循環配送方式 -->
+
+          </table>
+					
+----------------------------------<br />
+<!--支付方式-->
+支付方式
+    <table width="150" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" style="font-size:12px">
+            <tr>
+              <th width="5%" bgcolor="#ffffff">&nbsp;</th>
+              <th width="20%" bgcolor="#ffffff">{$lang.name}</th>
+              <th bgcolor="#ffffff">{$lang.describe}</th>
+              <th bgcolor="#ffffff" width="15%">{$lang.pay_fee}</th>
+            </tr>
+            <!-- {foreach from=$payment_list item=payment} -->
+            <!-- 循環支付方式 -->
+            <tr>
+              <td valign="top" bgcolor="#ffffff"><input type="radio" name="payment" value="{$payment.pay_id}" {if $order.pay_id eq $payment.pay_id}checked{/if} isCod="{$payment.is_cod}" onclick="selectPayment(this)" {if $cod_disabled and $payment.is_cod eq "1"}disabled="true"{/if}/></td>
+              <td valign="top" bgcolor="#ffffff"><strong>{$payment.pay_name}</strong></td>
+              <td valign="top" bgcolor="#ffffff">{$payment.pay_desc}</td>
+              <td align="right" bgcolor="#ffffff" valign="top">{$payment.format_pay_fee}</td>
+            </tr>
+            <!-- {/foreach} 循環支付方式 -->
+          </table>
+<input type="submit" name="Submit" value="提交訂單" />
+</form>
+<br />
+<a href="javascript:history.back(-1)">回上一頁</a><br/>
+<a href='index.php'>返回首頁</a>
+{$footer}
+</p>
+</body>
+</html>

@@ -1,0 +1,63 @@
+README                  		升級程序目錄結構說明文件
+index.php               		升級程序之控制器
+languages/              		語言包
+templates/              		模板	
+packages/				升級包存放目錄
+packages/v2.1.0/                 	升級包。從v2.0.5升級到v2.1.0
+packages/v2.1.0/changelog        	這裡存放文件和數據結構的修改歷史
+packages/v2.1.0/structure.sql    	數據結構升級文件
+packages/v2.1.0/data_zh_cn.sql   	數據升級文件之簡體中文版
+packages/v2.1.0/data_zh_tw.sql   	數據升級文件之繁體中文版
+.
+.
+.
+
+
+備註：
+一、每個升級包只負責較之低一個版本號的升級任務。
+
+
+二、由於要進行前綴替換以及表名獲取，為了精確匹配，
+在製作數據庫安裝或升級文件時，建議用以下SQL語句：
+CREATE TABLE
+DROP TABLE
+ALTER TABLE
+UPDATE
+REPLACE INTO
+INSERT INTO
+
+
+
+三、每個版本類，必須提供的接口有：
+
+方法：
+(1) update_database_optionally()
+在此函數中，用戶可隨心所欲地對數據庫進行操作，提高了程序的靈活性和適應性。
+這主要是考慮到，有些操作在SQL文件中直接用SQL語句不方便進行的緣故。
+
+(2) update_files()
+在此函數中，用戶可對系統的文件進行操作。
+
+屬性：
+(1) $sql_files 
+該屬性用於存放某個升級包中SQL文件存放的位置（相對於升級包所在的路徑）。
+一般來說形式如下：
+var $sql_files = array(
+		    'structure' => 'structure.sql',
+		    'data' => array(
+					    'zh_cn' => 'data_zh_cn.sql',
+					    'zh_tw' => 'data_zh_tw.sql'
+		    )
+);
+而當data不區分語言時，形式則如下：
+var $sql_files = array(
+		    'structure' => 'structure.sql',
+		    'data' => ‘data.sql’);
+
+當然，該數組可以沒有其中任何一個元素，甚至可以為空：
+var $sql_files = array('structure' => 'structure.sql');
+var $sql_files = array('data' => 'data.sql');
+var $sql_files = array();
+
+(2) $auto_match
+用來控制某升級包是否進行智能化的查詢操作

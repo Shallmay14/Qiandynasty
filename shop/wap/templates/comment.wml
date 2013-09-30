@@ -1,0 +1,29 @@
+<!DOCTYPE wml PUBLIC '-//WAPFORUM//DTD WML 1.1//EN' 'http://www.wapforum.org/DTD/wml_1.1.xml'>
+<wml>
+<head><meta http-equiv='Cache-Control' content='max-age=0'/></head>
+<card id='ecshop' title='ECShop_WAP'>
+<p align='left'>
+{$goods_info.goods_name}<br/>
+--------------<br/>
+{foreach from=$comment_data item=comment}
+    評論:{$comment.i}.{$comment.content}<br/>
+    發布人:{$comment.username}&nbsp;&nbsp;{$comment.add_time}<br/>
+    {if $comment.re_username}
+        =關於此評論的回覆=<br/>
+        {$comment.re_content}<br/>
+        回覆人:{$comment.re_username}&nbsp;&nbsp;{$comment.re_add_time}<br/>
+    {/if}
+{foreachelse}
+    暫無此商品評論<br/>
+{/foreach}
+{if $pagebar}
+{$pagebar}<br/>
+{/if}
+--------------<br/>
+<anchor title='back'>回上一頁<prev/></anchor><br/>
+<a href='goods.php?id={$goods_id}'>回商品詳細</a><br/>
+<a href='index.php'>返回首頁</a>
+{$footer}
+</p>
+</card>
+</wml>

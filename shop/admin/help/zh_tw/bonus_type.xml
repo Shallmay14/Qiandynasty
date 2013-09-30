@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="gbk"?>
+
+<help>
+  <section id="list">
+    <title>摸</title>
+    <content>
+    <![CDATA[
+	<p>眤┮Τ摸獺</p>
+	<p>眤秈︽巨:</p>
+	
+	<strong>е硉絪胯摸獺</strong>
+	<p>眤е硉絪胯珹<br><span class="link">摸嘿</span> <span class="link">肂</span> <span class="link">璹虫</span> 单ず甧<br>虫阑瞷絪胯ゅセ块眤穝ず甧óэネ</p>
+	<p class="tips"> 矗ボ狦摸祇ぃ琌璹虫肂ê或璹虫莱砞0</p>
+	
+	<strong>е硉琩獺</strong>
+	<p>虫阑娩<span class="link"> 琩 </span>渺钡,琩赣摸┮局Τ獺</p>
+	
+	<strong>祇摸祇</strong>
+	<p>眤璶翴阑娩<span class="link"> 祇 </span>渺钡秈莱巨</p>
+	
+	<strong>睰摸</strong>
+	<p>眤璶翴阑娩<a href="bonus.php?act=add" target="main-frame"><span class="link"> 睰摸 </span></a>渺钡秈睰巨</p>
+	
+	<strong>絪胯摸</strong>
+	<p>眤璶虫阑娩<span class="link"> 絪胯 </span>渺钡秈︽莱絪胯巨</p>
+	
+	<strong>埃摸</strong>
+	<p>眤璶翴阑娩<span class="link"> 埃 </span>渺钡╰参矗ボЧΘ埃巨</p>
+	<p class="tips"> 矗ボ讽眤埃摸赣摸ㄖ埃</p>
+	
+	]]>
+    </content>
+  </section>
+  <section id="add">
+    <title>睰摸</title>
+    <content>
+    <![CDATA[
+	<p>眤秈︽摸睰巨</p>
+	
+	<strong>摸嘿</strong>
+	<p>眤块眤璶睰穝摸嘿纔磃搂┍紋单单摸嘿某3°5簙ぇ丁程ㄎ</p>
+	
+	<strong>肂</strong>
+	<p>块摸肂碞琌ノめ潦禣摸╄綪肂</p>
+
+	<strong>祇摸</strong>
+	<p>兜Τ匡拒兜<br><span class="tips">ノめ祇</span>摸祇倒﹚ノめ 
+	<br><span class="tips">坝珇祇</span>摸琌潦禦﹚坝珇莉眔<br><span class="tips">璹虫肂祇</span>摸Τノめ潦禣笷﹚璹虫肂眔</p>
+
+	<strong>祇癬﹍ら戳</strong>
+	<p>琌摸祇癬﹍ら戳祇挡ら戳ぇ玡祇摸</p>
+	<strong>ㄏノ癬﹍ら戳</strong>
+	<p>矪琌摸ぐ或镑ㄏノㄏノ挡ら戳ぇ玡ㄏノ摸</p>
+	<p></p>
+	<p></p>
+	]]>
+    </content>
+  </section>
+  <section id="edit">
+    <title>絪胯摸獺</title>
+    <content>
+    <![CDATA[
+	<p>眤秈︽摸獺絪胯巨<br>(冈灿腊獺叫把ǎ <a href="bonus.php?act=add" target="main-frame"><span class="link"> 睰摸 </span></a> 场だ)</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+]]>
+    </content>
+  </section>
+</help>

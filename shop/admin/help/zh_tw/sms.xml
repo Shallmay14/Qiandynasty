@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="gbk"?>
+<help>
+  <section id="display_my_info">
+    <title>姐腹獺</title>
+    <content>
+    <![CDATA[
+	<p>セ陪ボ祇癳祏獺姐腹獺</p>
+	]]>
+    </content>
+  </section>
+
+  <section id="display_send_ui">
+    <title>祏獺祇癳</title>
+    <content>
+    <![CDATA[
+	<p>セ﹚も诀腹絏祇癳祏獺</p>
+	]]>
+    </content>
+  </section>
+  
+  <section id="display_charge_ui">
+    <title>姐め</title>
+    <content>
+    <![CDATA[
+	<p>セ矗ㄑ姐め巨块惠璶肂╰参矗ボ巨ЧΘ巨</p>
+	]]>
+    </content>
+  </section>
+  
+  <section id="display_send_history_ui">
+    <title>祏獺祇癳癘魁</title>
+    <content>
+    <![CDATA[
+	<p>琩高祏獺祇癳癘魁</p>
+	]]>
+    </content>
+  </section>
+  
+  <section id="display_charge_history_ui">
+    <title>癘魁</title>
+    <content>
+    <![CDATA[
+	<p>琩高眤癘魁</p>
+	]]>
+    </content>
+  </section>
+</help>

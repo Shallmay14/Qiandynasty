@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="gbk"?>
+
+<help>
+
+  <section id="list">
+    <title>珇礟</title>
+    <content>
+    <![CDATA[
+    <p><strong>е硉絪胯珇礟</strong></p>
+	<p>钡翴阑琘珇礟珇礟嘿珇礟呼逼赣跋办盢跑絪胯跋絪胯ЧΘó碞ЧΘ絪胯斌絪胯Τ虫阑絪胯跋ヴ跋办<span class="tips">逼抖逼腹禫逼玡</span>絪胯匡兜叫翴阑巨い絪胯渺钡</p>
+	<p><strong>睰穝珇礟</strong></p>
+	<p>翴阑à<a href="brand.php?act=add" target="main-frame"><span class="link">睰穝珇礟</span></a>渺钡碞秈睰穝珇礟</p>
+	<p><strong>矗ボ</strong></p>
+	<p>狦肚筁珇礟logo瓜珇礟玡瓜夹眒︹玥η︹</p>
+
+
+	
+	
+	]]>
+    </content>
+    </section>
+
+    <section id="add">
+    <title>睰穝珇礟</title>
+    <content>
+    <![CDATA[
+	<p><strong>睰穝珇礟</strong></p>
+	<p>珇礟ゲ斗恶糶ㄤウ匡恶翴阑à<a href="brand.php?act=list" target="main-frame"><span class="link">珇礟<span></a>渺钡<p>
+	
+	]]>
+    </content>
+  </section>
+
+  <section id="edit">
+    <title>絪胯珇礟</title>
+    <content>
+    <![CDATA[
+	<p><strong>絪胯珇礟</strong></p>
+	<p>叫把σ睰珇礟瓜夹玡狦瞷独︹瓜夹弧竒肚筁珇礟瓜Ω肚盢滦籠Ω肚瓜<br />翴阑à<a href="brand.php?act=list" target="main-frame"><span class="link">珇礟<span></a>渺钡<p>
+	
+	]]>
+    </content>
+  </section>
+
+</help>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ECShop_mobile</title>
+</head>
+
+<body>
+<p align='left'>
+我的訂單<br/>
+--------------<br/>
+{foreach from=$orders item=order_data}
+    {$order_data.order_id}.訂單號:{$order_data.order_sn}<br/>
+    下單時間:{$order_data.order_time},價格:{$order_data.total_fee}
+    訂單狀態:{$order_data.order_status}，操作：{$order_data.handler}<br/>
+    --------------<br/>
+ {foreachelse}
+    暫時您沒有訂單<br/>
+    --------------<br/>
+{/foreach}
+{if $pagebar}
+    {$pagebar}<br/>
+{/if}
+<a href="javascript:history.back(-1)">回上一頁</a><br/>
+<a href='index.php'>返回首頁</a>
+{$footer}
+</p>
+</body>
+</html>
